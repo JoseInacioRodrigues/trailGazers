@@ -1,4 +1,15 @@
-# trilhos
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+## General info
+This project is simple Lorem ipsum dolor generator.
+
+
+<h1>Trilhos</h1>
+
 django-rest_framwork + vue
 
 criar um virtual environment para desenvolvimento:
