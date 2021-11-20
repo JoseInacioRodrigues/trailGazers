@@ -2,6 +2,8 @@
 # Trilhos 
 
 # -------------------------------
+## Python - Django
+
 1-Instalar python
 
 2-Criar virtual environment numa pasta, por exemplo trilhos_venv (não incluir esta pasta no github):

@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from core.models import RecursoImagem, RecursoVideo
+from core.models import ImageResource, VideoResource
 
-admin.site.register(RecursoImagem)
-admin.site.register(RecursoVideo)
+admin.site.register(ImageResource)
+admin.site.register(VideoResource)

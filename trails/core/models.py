@@ -2,36 +2,35 @@ from django.db import models
 
 # Create your models here.
 
-class Recurso(models.Model):
-
+class Resource(models.Model):
     pass
 
 
-class RecursoVideo(models.Model):
-    data_criacao = models.DateField(auto_now_add=True)
+class VideoResource(models.Model):
+    created_at = models.DateField(auto_now_add=True)
     video = models.FileField(upload_to='videos', default=None)
-    descricao = models.TextField(default='')
-    activo = models.BooleanField(default=True)
+    content = models.TextField(default='')
+    enable = models.BooleanField(default=True)
 
     class Meta:
         managed = True
         db_table = 'videos'  
-        verbose_name_plural = "RecursosVideo" 
+        verbose_name_plural = "VideoResources" 
 
     def __str__(self):
-        return self.descricao 
+        return self.content 
 
 
-class RecursoImagem(models.Model):
-    data_criacao = models.DateField(auto_now_add=True)
-    imagem = models.ImageField(upload_to='imagens',default=None)
-    descricao = models.TextField(default='')
-    activo = models.BooleanField(default=True)
+class ImageResource(models.Model):
+    created_at = models.DateField(auto_now_add=True)
+    image = models.ImageField(upload_to='images',default=None)
+    content = models.TextField(default='')
+    enable = models.BooleanField(default=True)
 
     class Meta:
         managed = True
-        db_table = 'imagens' 
-        verbose_name_plural = "RecursosImagem"
+        db_table = 'images' 
+        verbose_name_plural = "ImageResources"
 
     def __str__(self):
-        return self.descricao 
+        return self.content 
