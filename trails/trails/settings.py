@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#f2m8_)*wz#4v)%sl$=xxh=q)kakzt0ivfxd=v8(u)g+h&=o+z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -78,17 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'fmvg' :{
-                'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'fmvgdb',
-        'USER': 'fmvg_user',
-        'PASSWORD': 'fmvguser',
-        # 'HOST': 'milage-sapp-01.ualg.pt',
-        'HOST': 'localhost',
-        'PORT': '5432',
     }
-
 }
 
 
@@ -128,8 +118,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/trailstatic/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATIC_FILES_DIR = [ BASE_DIR / 'static']
 
+MEDIA_URL = '/trailmedia/'
+MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
