@@ -50,7 +50,7 @@ Frameworks de desenvolvimento: Ionic e Vue JS
 
 ## Exemplos:
 
-O conteudo da versão base poderá ser acedida através dos seguintes endereços:
+A versão disponibilizada no repositório poderá ser acedida através dos seguintes endereços:
 
 http://fmvg.milage.io/admin/  -> backend do django
 
