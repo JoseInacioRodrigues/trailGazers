@@ -18,12 +18,12 @@ https://v4.webpack.js.org/configuration/dev-server/
 
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/static/dist/' : 'http://127.0.0.1:3000',
-    outputDir: '../trails/static/dist',
+    outputDir: '../trails/static_files/dist',
     indexPath: '../../templates/index.html',
     pages: {
       index: {
         entry: 'src/main.js',
-        title: 'QuestionTime',
+        title: 'Trails',
       },
     },
     chainWebpack: config => {

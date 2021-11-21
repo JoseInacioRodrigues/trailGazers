@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'trails.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if DEBUG:
+if (os.uname()[0] != "Linux"):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -89,9 +90,9 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'trailsdb',
-            'USER': 'trails',
+            'USER': 'trails_user',
             'PASSWORD': 'trails2021',
-            'HOST': 'localhost',
+            'HOST': '127.0.0.1',
             'PORT': '5432',
             }}
 
