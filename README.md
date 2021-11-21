@@ -53,6 +53,8 @@ Frameworks de desenvolvimento: Ionic e Vue JS
 O conteudo da versão base poderá ser acedida através dos seguintes endereços:
 
 http://fmvg.milage.io/admin/  -> backend do django
+
 http://fmvg.milage.io/api/images/  -> api com operações para a tabela de imagens
+
 http://fmvg.milage.io/app/   -> backoffice em vuejs com visualização das imagens devolvidas pela api.
 
